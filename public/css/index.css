@@ -12,6 +12,12 @@
     position: relative;
     overflow: hidden;
   }
+  .audio{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 3rem;
+  }
   main {
     display: flex;
     justify-content: center;
@@ -87,44 +93,49 @@
   
   /* Mobile Responsiveness */
   @media only screen and  (max-width: 320px){
-    body {
-      background-image: url('/images/ppg-heart.gif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center center;
-      font-family: "Fascinate", "cursive", sans-serif;
-      color: white;
-      max-width: 100%;
-    }
-    header h1{
-      text-align: center;
-      font-size: 1rem;
-      padding-top: 20%;
-    }
   }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+    background-position: center center;
+    overflow-x: hidden;
+  }
+  
   main h1 {
     text-align: center;
     font-size: 1rem;
     padding-right: 5%;
+    color: white;
   }
   
-  input{
-    font-size: 1em;
-    margin-top: 1.5%;
-    border-radius: 5%;
-    font-family: "Fascinate", "cursive", sans-serif;
+  #input{
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
   }
-  #traits {
-  display: flex;
-  padding-top: 3%;
-  color: white;
-  font-size:1em;
+  .response li {
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-wrap: wrap;
+  }
+  .response li:last-child{
+    padding-bottom: 2rem;
+  }
+  #charHair{
+    padding-left: 0;
   }
   #container {
   border-radius: 5%;
   background-color: rgba(20, 19, 19, 0.649);
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   max-width: 100%;
@@ -132,26 +143,16 @@
   margin-top: 1%;
   }
   /* have to figure out how to fix second background image in mobile */
-  #btn{
+  #button{
   font-size:1em;
   margin: 1% 5% 0 5%;
-  border-radius: 2em;
-  padding: 3% 3% 3% 3%;
+  border-radius: 1rem;
+  padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   background-color: red;
   font-family: "Fascinate", "cursive", sans-serif;
   color: white;
   }
   @media  only screen and (max-width: 480px){
-    body {
-      background-image: url('/images/ppg-heart.gif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center center;
-      font-family: "Fascinate", "cursive", sans-serif;
-      color: white;
-      max-width: 100%;
-    }
     header h1{
       text-align: center;
       font-size: 5rem;
@@ -197,16 +198,6 @@
   }
   }
   @media only screen and (max-width: 900px) {
-    body {
-      background-image: url('/images/ppg-heart.gif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center center;
-      font-family: "Fascinate", "cursive", sans-serif;
-      color: white;
-      width: 100%;
-    } 
     header h1{
       text-align: center;
       font-size: 2rem;
