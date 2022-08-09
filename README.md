@@ -2,7 +2,8 @@
 
 <div align ="center"> 
 
-![city](https://user-images.githubusercontent.com/101071525/183767224-f022b8e3-b384-42a9-a71c-408aca20b502.jpeg)
+![Screen Shot 2022-08-09 at 7 05 47 PM](https://user-images.githubusercontent.com/101071525/183777175-b7771e29-7ae6-4cdf-bd39-549009e1ba72.png)
+
 
 [Link to project](https://powerpuffapi.netlify.app/)
 
