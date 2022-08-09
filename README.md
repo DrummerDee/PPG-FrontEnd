@@ -31,7 +31,7 @@
 * Javascript
 
 ## What was learned 
-With this project, you are able to fetch data from an api.
+With this project, you will learn to correctly fetch data from an API on the client side
 
 ### Optimizations
 * Allow users to add characters 
