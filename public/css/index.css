@@ -4,7 +4,7 @@
     padding: 0;
   }
   body {
-    background-image: url('/images/ppg-heart.gif');
+    background-image: url('../images/ppg-heart.gif');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Fascinate", "cursive", sans-serif;

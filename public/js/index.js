@@ -5,7 +5,6 @@
     // local variables
     let button = document.getElementById('button');
     let searchQuery = document.getElementById('input');
-    console.log('INITIALIZE APP: ', searchQuery.value, ' this will be null');
 
     // Event listeners
     button.addEventListener('click', apiRequest);
@@ -29,8 +28,7 @@
         }
 
        if (searchQueryValue.length) { // either 0 or greater; if 0 = false if +1 true
-            console.log('API Request');
-            return fetch(`https://power-puff.herokuapp.com/api/${searchQueryValue}`)
+            return fetch(`https://powerpuff-app.herokuapp.com/api/${searchQueryValue}`)
                 .then(resp => resp.json())
                 .then(data => updateDOMList(data))
                 .catch(err => {
@@ -45,6 +43,7 @@
             return; // exit out of the function
         }
         if (data) {
+// grabs each characteristic and displays them within the DOM
             const elements = [
                 {
                     id: 'charName',
@@ -61,7 +60,31 @@
                     label: 'Accessories',
                     value: data.accessories
                 },
-                ///....
+                {
+                    id: 'charHair',
+                    label: 'Hair Color',
+                    value: data.hairColor
+                },
+                {
+                    id: 'charSuper',
+                    label: 'Super Power(s)',
+                    value: data.superPowers
+                },
+                {
+                    id: 'charNemesis',
+                    label: 'Nemesis',
+                    value: data.archNemesis
+                },
+                {
+                    id: 'charPhrase',
+                    label: 'Phrase Said',
+                    value: data.phraseSaid
+                },
+                {
+                    id: 'charVoice',
+                    label: 'Voiced By',
+                    value: data.voicedBy
+                }
             ];
 
             elements.forEach(value => {
@@ -69,23 +92,6 @@
                     document.getElementById(value.id).innerText = `${value.label}: ${value.value}`;
                 }
             });
-
-
-
-
-            // document.getElementById('charName').innerText = `Name : ${data.name}`; //grabs name from obj and inserts it into DOM
-            // document.getElementById('charAnime').innerText = `Anime Name: ${data.animeName}`;
-            // document.getElementById('charAcces').innerText = `Accessories: ${data.accessories}`;
-            // document.getElementById('HairColor').innerText = "Hair Color:";
-            // document.getElementById('charHair').innerText = data.hairColor;
-            // document.getElementById('SuperPowers').innerText = "Super Powers:";
-            // document.getElementById('charSuper').innerText = data.superPowers;
-            // document.getElementById('ArchNemesis').innerText = "Arch Nemesis:";
-            // document.getElementById('charNemesis').innerText = data.archNemesis;
-            // document.getElementById('Phrase').innerText = "Phrase:";
-            // document.getElementById('charPhrase').innerText = data.phraseSaid;
-            // document.getElementById('VoiceActor').innerText = "Voice Actor:";
-            // document.getElementById('charVoice').innerText = data.voicedBy;
         }
     }
 })();
