@@ -45,5 +45,13 @@ Steps to install [node](https://nodejs.org/en/)
 
 
 
-<h3> To Install Locally </h3>
-Git clone this repo and then npm install 
+## Installation
+```
+git clone [this repo link ]
+```
+npm install
+```
+```
+npm run start or node server.js
+```
+
