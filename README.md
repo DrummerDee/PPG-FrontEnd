@@ -13,7 +13,7 @@
 
 
 <div align ="center"> 
-  <h3 style="italic">Get a sense of nostalgia with this API that delivers information about the characters in the infamous show ; The Powerpuff Girls</h3>
+  <h3 style="italic">Get a sense of nostalgia with this API that delivers information about the characters from the infamous show ; The Powerpuff Girls</h3>
 </div>
 
 ## Table of Contents 
@@ -24,15 +24,14 @@
 4. Node Dependencies
 5. Prerequisities
 
+## What was learned 
+Besides learning more details about my favorite characters, I revisted how to fetch data from an API. In this case, the api is one that I created on the server side. I learned to format my code more efficiently so that other programmers, and myself, can easily read what I'm accomplsihing. Lastly, I learned to use my developer tools more which helped me to correct my application's mobile responsiveness and accessability. 
+
 ## Built With 
-* Express
-* Cors
 * Html
 * CSS
 * Javascript
 
-## What was learned 
-With this project, you will learn to correctly fetch data from an API on the client side
 
 ### Optimizations
 * Allow users to add characters 
@@ -47,10 +46,12 @@ Steps to install [node](https://nodejs.org/en/)
 
 ## Installation
 ```
-git clone [this repo link ]
+git clone https://github.com/DrummerDee/PPG-FrontEnd.git
+```
 ```
 npm install
 ```
+
 ```
 npm run start or node server.js
 ```
