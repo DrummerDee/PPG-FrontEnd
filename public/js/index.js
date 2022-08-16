@@ -1,6 +1,5 @@
 
 //IIFE - self evaluating function
-// https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 (() => {
     // local variables
     let button = document.getElementById('button');
@@ -20,7 +19,8 @@
 
     // Functions
    function apiRequest() {
-        let searchQueryValue = searchQuery.value;
+        let searchQueryValue = searchQuery.value.split(' ').join('').trim();
+        
 
         if (!searchQueryValue.length) {
             // TODO implement something visually nicer
@@ -29,7 +29,7 @@
 
        if (searchQueryValue.length) { // either 0 or greater; if 0 = false if +1 true
             return fetch(`https://powerpuff-app.herokuapp.com/api/${searchQueryValue}`)
-                .then(resp => resp.json())
+                .then(res => res.json())
                 .then(data => updateDOMList(data))
                 .catch(err => {
                     console.error('ERROR: ', err);
